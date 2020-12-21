@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Cat's game.</h1>
+    <table>
+        {% for i in range(3) %}
+            <tr>
+                {% for j in range(3) %}
+                    <td>
+                        {% if game[i][j] %}
+                            {{ game[i][j] }}
+                        {% else %}
+                            <a href="{{ url_for('play', row=i, col=j) }}"></a>
+                        {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/reset">
+        <button type="submit">Reset Game</button>
+    </form>
+{% endblock %}

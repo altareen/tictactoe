@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+button {
+    font-size: 18px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #e7e7e7;
+}
+
+table
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td
+{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*
+td > a
+{
+    font-size: 18px;
+}
+*/
+
