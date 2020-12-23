@@ -80,7 +80,6 @@ def reset():
     #del session["board"]
     session["board"] = [[None, None, None], [None, None, None], [None, None, None]]
     session["turn"] = "X"
-    #return redirect(url_for("index"))
 
-    return render_template("game.html", game=session["board"], turn=session["turn"])
+    return redirect(url_for("index"))
 
