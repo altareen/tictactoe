@@ -32,6 +32,9 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+# Set the secret key to some random bytes. Keep this really secret!
+app.secret_key = b'\x7fR\xc8\x933\n\xea\x90\xa6\x8c\x12\xd6r#gO'
+
 @app.route("/")
 def index():
     if "board" not in session:
