@@ -79,5 +79,6 @@ def play(row, col):
 def reset():
     #del session["board"]
     session["board"] = [[None, None, None], [None, None, None], [None, None, None]]
+    session["turn"] = "X"
     return redirect(url_for("index"))
 
