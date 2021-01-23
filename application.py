@@ -23,18 +23,15 @@
 
 from flask import Flask, render_template, session, redirect, url_for
 from flask_session import Session
-from tempfile import mkdtemp
+#from tempfile import mkdtemp
 
 app = Flask(__name__)
 
-app.config["SESSION_FILE_DIR"] = mkdtemp()
-app.config["SESSION_PERMANENT"] = False
-app.config["SESSION_TYPE"] = "filesystem"
-app.config["SECRET_KEY"] = b'\x7fR\xc8\x933\n\xea\x90\xa6\x8c\x12\xd6r#gO'
-Session(app)
-
-# Set the secret key to some random bytes. Keep this really secret!
-#app.secret_key = b'\x7fR\xc8\x933\n\xea\x90\xa6\x8c\x12\xd6r#gO'
+#app.config["SESSION_FILE_DIR"] = mkdtemp()
+#app.config["SESSION_PERMANENT"] = False
+#app.config["SESSION_TYPE"] = "filesystem"
+#Session(app)
+app.config.from_pyfile("config.py")
 
 @app.route("/")
 def index():
